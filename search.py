@@ -4,7 +4,7 @@ conn = Neo4jConnection(uri="bolt://localhost:7687", user="test", pwd="test")
 
 def find_officer(name: str, limit: int):
     '''
-    This function returns the information of a name if one is found
+    This function returns the information of a name if one is found.
     '''
     query_string = f"""
     MATCH (a:Officer)
