@@ -1,5 +1,6 @@
 from database import Neo4jConnection
 from get_wikipedia_list import get_wiki_landtag_list
+import pandas as pd
 
 conn = Neo4jConnection(uri="bolt://localhost:7687", user="test", pwd="test")
 
@@ -28,3 +29,6 @@ def save_results(results: list):
 
 #Bereits ausgeführt, hier weitere Listen anfügen
 #save_results(get_wiki_landtag_list("Liste der Mitglieder des Landtags von Baden-Württemberg (17. Wahlperiode)"))
+#read input excel file
+#name_df = pd.read_excel("input/names.xlsx")
+#save_results(list(name_df["Name"]))
